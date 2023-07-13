@@ -1,0 +1,14 @@
+<script>
+
+const streamlitDoc = window.parent.document;
+
+buttons = Array.from(streamlitDoc.querySelectorAll(".stButton > button"));
+console.log(buttons)
+
+const overall=buttons.find((el) => el.innerText === "Overall");
+const delayed=buttons.find((el) => el.innerText === "Delayed");
+
+overall.style.backgroundColor = "red"
+delayed.style.backgroundColor = "green"
+
+</script>
