@@ -58,22 +58,22 @@ if excel:
         st.dataframe(df)
             
             
-if delayed:
+    if delayed:
         x = pd.ExcelFile(excel)
         st.write("Delayed")
         delayed_sheet = x.parse('المتأخر')
         st.dataframe(delayed_sheet)
-if trubled:
+    if trubled:
         x = pd.ExcelFile(excel)
         st.write("Troubled")
         trubled_sheet = x.parse('متعثر')
         st.dataframe(trubled_sheet)
-if suspended:
+    if suspended:
         x = pd.ExcelFile(excel)
         st.write("Suspended")
         suspended_sheet = x.parse('المتوقفة')
         st.dataframe(suspended_sheet)
-if timeoverrun:
+    if timeoverrun:
         pass
 
 
