@@ -51,11 +51,15 @@ withdrawn=st.sidebar.button("Withdrawn")
 performance=st.sidebar.button("Performance")
 
 if excel:
-    if overall:
-        dataframe,sheet=read(excel)
-        x=pd.ExcelFile(excel)
-        df= x.parse(sheet)
-        st.dataframe(df)
+      if overall:
+        x=pd.read_excel(excel,None)
+        sheetnames=x.keys()
+        selected = st.selectbox(
+        "Select a sheet",
+        sheetnames
+    )
+        st.write(x)
+            
             
             
     if delayed:
